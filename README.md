@@ -2,7 +2,7 @@
 
 A [WebExtension](https://developer.mozilla.org/en-US/Add-ons/WebExtensions) to send the current tab to your 2Do inbox. Works with Chrome and Firefox.
 
-* Add to 2Do for Chrome **Coming Soon**
+* [Add to 2Do for Chrome](https://chrome.google.com/webstore/detail/add-to-2do/pljlbbaldemchhegnjbdnnfepmfoeccc)
 * [Add to 2Do for Firefox](https://addons.mozilla.org/de/firefox/addon/add-to-2do/)
 
 ## What it does
@@ -20,4 +20,3 @@ Make sure you allow your browser to open `twodo`-links with the 2Do app.
 ## References
 
 * The icon is property of the [2DoApp](http://www.2doapp.com/). Thanks for letting this project use it.
-* Used to

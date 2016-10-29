@@ -3,12 +3,6 @@
   "name": "Add to 2Do",
   "version": "1.0",
   "description": "Adds a button to create a task in 2Do for the current tab.",
-  "applications": {
-    "gecko": {
-      "id": "firefox-2do-extension@xam.io",
-      "strict_min_version": "45.0"
-    }
-  },
   "icons": {
     "18": "assets/icon-18.png",
     "36": "assets/icon-36.png",
