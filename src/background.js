@@ -1,34 +1,30 @@
 'use strict';
 
-function createTask(title, note) {
+function createTask(chrome, title, note) {
   let task = 'twodo://x-callback-url/add?task=' + encodeURI(title) + '&note=' + encodeURI(note);
-
-  //
-  let iFrame = document.createElement("iframe");
-  iFrame.src = task;
-
-  document.body.appendChild(iFrame);
-  document.body.removeChild(iFrame);
+  chrome.tabs.update({
+   url: task
+  });
 }
-
-
-chrome.browserAction.onClicked.addListener(function (aTab) {
-
+chrome.browserAction.onClicked.addListener(function(aTab) {
   chrome.tabs.executeScript(aTab.id, {
 
     code: "window.getSelection().toString()"
 
-  }, function (selectedText) {
+  }, function(selectedText) {
 
     let title = aTab.title;
     let note = aTab.url;
+
+    if (selectedText instanceof Array && selectedText.length > 0) {
+      selectedText = selectedText[0];
+    }
 
     if (selectedText && selectedText.length) {
       note = note + "\n--\n" + selectedText;
     }
 
-    createTask(title, note);
+    createTask(chrome, title, note);
 
   });
-
 });

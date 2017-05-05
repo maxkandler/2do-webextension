@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Add to 2Do",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Adds a button to create a task in 2Do for the current tab.",
   "icons": {
     "18": "assets/icon-18.png",
@@ -23,7 +23,6 @@
   },
   "permissions": [
     "tabs",
-    "http://*/",
-    "https://*/"
+    "activeTab"
   ]
 }
